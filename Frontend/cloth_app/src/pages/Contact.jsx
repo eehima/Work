@@ -199,7 +199,7 @@ const ContactForm = () => {
         }
         
         .submit-button {
-          background-color: #aaa;
+          background-color: #a8a6a1;
           border: none;
           border-radius: 50px;
           padding: 0.8rem 2rem;

@@ -81,7 +81,7 @@ const SignupModal = ({ show, handleClose, switchToLogin }) => {
 
           {error && <Alert variant="danger" className="mt-3">{error}</Alert>}
 
-          <Button variant="secondary" type="submit" className="mt-3 w-100">
+          <Button variant="secondary" type="submit" className="mt-3 w-100" style={{backgroundColor:"#3e3e3e"} }>
             Sign Up
           </Button>
         </Form>
@@ -90,7 +90,7 @@ const SignupModal = ({ show, handleClose, switchToLogin }) => {
           <p>
             Already have an account?{' '}
             <span
-              style={{ color: '#007bff', cursor: 'pointer' }}
+              style={{ color: '', cursor: 'pointer' }}
               onClick={() => {
                 handleClose()
                 switchToLogin()

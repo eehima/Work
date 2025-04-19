@@ -1,20 +1,7 @@
 import React from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
-const LoginModal = ({ show, handleClose, switchToSignup}) => {
-  const navigate = useNavigate();
-
-  const handleCreateAccount = () => {
-    handleClose();
-    navigate("/register"); // Adjust the path based on your app
-  };
-
-  const handleResetPassword = () => {
-    handleClose();
-    navigate("/reset-password"); // Adjust the path accordingly
-  };
-
+const LoginModal = ({ show, handleClose, switchToSignup, switchToForgotPassword }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
@@ -23,16 +10,14 @@ const LoginModal = ({ show, handleClose, switchToSignup}) => {
       <Modal.Body>
         <Form>
           <Form.Group controlId="formBasicEmail">
-            
             <Form.Control type="email" placeholder="Enter email" />
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword" className="mt-3">
-            
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
 
-          <Button variant="secondary" type="submit" className="mt-3 w-100">
+          <Button variant="secondary" type="submit" className="mt-3 w-100" style={{backgroundColor:"#3e3e3e"} }>
             Login
           </Button>
         </Form>
@@ -41,7 +26,7 @@ const LoginModal = ({ show, handleClose, switchToSignup}) => {
           <p>
             Don't have an account?{" "}
             <span
-              style={{ color: "#007bff", cursor: "pointer" }}
+              style={{ color: "", cursor: "pointer" }}
               onClick={() => {
                 handleClose();
                 switchToSignup();
@@ -52,16 +37,14 @@ const LoginModal = ({ show, handleClose, switchToSignup}) => {
           </p>
 
           <p>
-            Forgot Password?{" "}
             <span
-              style={{
-                color: "#007bff",
-                cursor: "pointer",
-                textDecoration: "none",
+              style={{ color: "", cursor: "pointer" }}
+              onClick={() => {
+                handleClose();
+                switchToForgotPassword();
               }}
-              onClick={handleResetPassword}
             >
-              Reset Password
+              Forgot Password?
             </span>
           </p>
         </div>
