@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { FaShoppingCart, FaInstagram, FaUser, FaLock } from 'react-icons/fa';
 
-function CustomNavbar() {
+function CustomNavbar({ onLoginClick }) {
   return (
     <Navbar expand="lg" bg="light" variant="light" className="py-3">
       <Container fluid>
@@ -13,7 +13,7 @@ function CustomNavbar() {
 
         {/* Center: Brand Logo (Always Centered) */}
         <Navbar.Brand
-          href="#"
+          href="/"
           className="mx-auto text-center fw-bold position-absolute"
           style={{ left: '50%', transform: 'translateX(-50%)' }}
         >
@@ -37,7 +37,7 @@ function CustomNavbar() {
 
           {/* Right: Login, Instagram, Padlock Icon (Visible on Desktop) */}
           <Nav className="d-flex flex-row gap-3 ms-auto d-lg-flex">
-            <Nav.Link href="/login">
+            <Nav.Link href="#" onClick={(e) => { e.preventDefault(); onLoginClick(); }}>
               {/* <FaUser /> */}Login
             </Nav.Link>
             <Nav.Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
