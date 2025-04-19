@@ -7,8 +7,8 @@ function CustomNavbar() {
       <Container fluid>
         {/* Left Links (Visible on Desktop) */}
         {/* <Nav className="d-flex flex-row gap-3 d-none d-lg-flex">
-          <Nav.Link href="#shop">Shop</Nav.Link>
-          <Nav.Link href="#content">Content</Nav.Link>
+          <Nav.Link href="/">Shop</Nav.Link>
+          <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav> */}
 
         {/* Center: Brand Logo (Always Centered) */}
@@ -31,14 +31,14 @@ function CustomNavbar() {
         {/* Collapsible Navbar Items for Mobile & Desktop */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto d-flex flex-row gap-3 d-lg-flex">
-            <Nav.Link href="#shop">Shop</Nav.Link>
-            <Nav.Link href="#content">Content</Nav.Link>
+            <Nav.Link href="/">Shop</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
 
           {/* Right: Login, Instagram, Padlock Icon (Visible on Desktop) */}
           <Nav className="d-flex flex-row gap-3 ms-auto d-lg-flex">
-            <Nav.Link href="#login">
-              <FaUser />
+            <Nav.Link href="/login">
+              {/* <FaUser /> */}Login
             </Nav.Link>
             <Nav.Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
