@@ -37,12 +37,12 @@ const Footer = () => {
         {/* Navigation Links */}
         <Row className="footer-links mb-4">
           <Col xs={12} sm={4} className="text-center text-sm-start mb-3 mb-sm-0">
-            <Link to="/shipping-return-policy" className="footer-link">
+            <Link to="#" className="footer-link">
               Shipping & Return Policy
             </Link>
           </Col>
           <Col xs={12} sm={4} className="text-center mb-3 mb-sm-0">
-            <Link to="/shop" className="footer-link">
+            <Link to="/" className="footer-link">
               Shop
             </Link>
           </Col>
